@@ -1,0 +1,50 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "name": "clickssamplecsv",
+      "path": "p9blob/clicks_sample.csv",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "name": "articlemetadatacsv",
+      "path": "p9blob/articles_metadata.csv",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "dataType": "binary",
+      "name": "dfpcareduitpickle",
+      "path": "p9blob/df_pca_reduit.pickle",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "type": "blob",
+      "direction": "in",
+      "dataType": "binary",
+      "name": "modelereco",
+      "path": "p9blob/modele_reco_leger.pkl",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
